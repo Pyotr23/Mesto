@@ -1,0 +1,12 @@
+.popup__content.popup__content_card-image{       
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;    
+    width: auto;     
+}
+
+@media screen and (max-width: 540px) {
+    .popup__content.popup__content_card-image {
+      width: auto;
+    }
+  }

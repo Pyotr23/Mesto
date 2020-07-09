@@ -1,0 +1,8 @@
+@import url(./__key/info-row__key.css);
+@import url(./__value/info-row__value.css);
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

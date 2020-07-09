@@ -1,0 +1,6 @@
+.popup__content.popup__content_info {
+    width: auto;
+    min-height: auto;
+    padding: 10px;
+    max-height: 370px;
+}

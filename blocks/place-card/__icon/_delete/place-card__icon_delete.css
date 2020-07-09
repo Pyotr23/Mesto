@@ -1,0 +1,7 @@
+.place-card__icon_delete {
+    top: 18px;
+    left: 15px;
+    background-image: url(../../../../images/trash-icon.svg);    
+    width: 18px;
+    height: 20px;
+}

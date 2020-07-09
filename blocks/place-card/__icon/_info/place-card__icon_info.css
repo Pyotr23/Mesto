@@ -1,0 +1,7 @@
+.place-card__icon_info {
+    top: 18px;
+    right: 15px;
+    background-image: url(../../../../images/info-icon.svg);    
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,12 @@
+.button.button_place_user-info{
+    margin: 20px 0 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    width: auto;
+    height: auto;
+}
+
+.button.button_place_user-info:hover{
+    background-color: white;
+    color: black;
+}
