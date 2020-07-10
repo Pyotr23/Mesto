@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: { main: './src/index.js' },
@@ -36,10 +37,6 @@ module.exports = {
                 },
                 exclude: /node_modules/
             },
-            // {
-            //     test: /\.css$/,
-            //     use: [MiniCssExtractPlugin.loader, 'css-loader']
-            // },
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 use: [
@@ -51,7 +48,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=../images/[name].[ext]',
+                    'file-loader?name=./images/[name].[ext]',
                     {
                             loader: 'image-webpack-loader',
                             options: {}
@@ -61,6 +58,14 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+              { from:'src/images', to:'images' }
+            ],
+            options: {
+              concurrency: 100,
+            },
+          }),
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css'
         }),
@@ -76,6 +81,6 @@ module.exports = {
             inject: false,
             template: './src/index.html',
             filename: 'index.html'
-        })
+        })        
     ]
 }

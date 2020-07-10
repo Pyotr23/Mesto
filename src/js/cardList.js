@@ -47,7 +47,6 @@ export default class CardList {
                 this._addOwnerName(cardDto.owner.name);            
             cardDtoes.splice(index, 1);                
         }      
-        console.log(this._owners);  
         return this._cards;
     }
 
