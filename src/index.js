@@ -17,8 +17,11 @@ import OwnCard from './js/cards/OwnCard'
 
 (function () {
   'use strict';
+  const serverUrl = process.env.NODE_ENV === 'development' 
+    ? 'http://praktikum.tk/cohort11' 
+    : 'https://praktikum.tk/cohort11';
   const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: serverUrl,
     headers: {
       authorization: '24e96659-b7fc-4d52-a3f3-ac251a10cc64',
       'Content-Type': 'application/json'           
